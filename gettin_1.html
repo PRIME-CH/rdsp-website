@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RDSP Info</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+body,html{
+  overflow-x:hidden;
+}
+    .card.two p {
+      font-size: 27px;
+      line-height:35px;
+    }
+    .card.one p{
+        font-size: 26px;
+        line-height:33px;
+ 
+    }
+    .card-container {
+      background-color: transparent;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 40px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      height:550px;
+
+
+    }
+    .card-container::before{
+      content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  z-index: 0; /* Ensure it stays behind the content */
+ 
+    }
+.first p{
+    padding-bottom:20px;
+}
+    .card-container.reverse {
+      justify-content: flex-end;
+    }
+   
+    .card-container:hover::before {
+  opacity: 0.9; /* Make the background visible on hover */
+}
+.card-container.reverse.one::before{
+  background-image: url("image5.jpeg");
+  background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left center;
+
+}
+.card-container.reverse.two::before{
+  background-image: url("image7.png");
+  background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left center;
+
+}
+    .card-container.second::before{
+      background-image: url("image6.jpeg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right center;
+    
+    }
+
+  
+   .card-container.first::before{
+    background-image: url("image4.jpeg");
+    background-repeat: no-repeat;
+      background-size: contain;
+      background-position:100% 0%;
+   }
+   
+ 
+    .card {
+      background-color: white;
+      padding-left: 25px;
+      padding-top:10px;
+      width:55%;
+      transition: transform 0.7s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .card-container:hover .card {
+  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 5px 10px 20px rgba(70, 68, 68, 0.2); /* Add shadow */
+}
+    .card-container:hover .first,
+    .card-container:hover .card.one {
+      transform: translatey(-34px);
+    }
+
+    
+    .card-container:hover .card.two{
+      transform:translatey(-34px);
+    }
+  .card-container
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      display: flex;
+      gap: 12px;
+      color: rgb(244, 188, 44);
+    }
+
+    .stories {
+      background: #eef6ff;
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 90%;
+      margin: 60px auto 100px auto;
+      font-size: 30px;
+      box-shadow: 10px 6px 30px rgb(11, 26, 123);
+    }
+
+    .story {
+      background-color: #abdeed;
+      border-radius: 20px;
+      padding: 25px;
+      transition: transform 0.3s ease;
+      box-shadow: 10px 6px 30px grey;
+      margin:30px;
+    }
+
+    .story:hover {
+      transform: scale(1.05);
+    }
+
+    .story-author {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .story-quote {
+      font-style: italic;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .icon {
+      font-size: 1.4rem;
+      color: blue;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+.stories .section-title{
+  font-size: 2.5rem;
+      display: flex;
+      padding-bottom:30px;
+      justify-content:center;
+      color: rgb(244, 188, 44);
+}
+    .footer {
+      background-color: #133bb1;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px 50px;
+      border-top-right-radius: 20px;
+    }
+
+    .footer-section {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .footer-logo {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    .logo-contact p {
+      font-size: 26px;
+      line-height: 1.5;
+      font-style: italic;
+      margin-top: 60px;
+    }
+
+    .logo-contact a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .mascot {
+      width: 80px;
+    }
+
+    .help {
+      display: flex;
+      gap: 10px;
+    }
+
+    .help-text {
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .links h3 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      margin-left: 40px;
+    }
+
+    .links ul {
+      padding-left: 60px;
+    }
+
+    .links li {
+      margin: 5px 0;
+      font-size: 25px;
+    }
+
+    .links a {
+      color: #ffc800;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="abstract-glowing-neon-lines-wallpaperwaifu-com (1)" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="card-container first">
+    <div class="card one">
+      <h2 class="section-title"><i class="fas fa-lightbulb icon"></i> IS THE RDSP RIGHT FOR YOU ?</h2>
+      <p><strong>For many people</strong>, the answer is yes. If you qualify and have a low income, simply opening an RDSP and filing your taxes can lead to thousands in government contributions — even if you don’t add any money yourself. A young person could see their plan grow to $50,000 or more over time. If you're a parent able to contribute around $1,500 a year, your child’s RDSP could reach up to $400,000 by adulthood.
+        That said, everyone’s situation is different, and it’s normal to have questions. If you’re unsure, our [expert] can help you explore your options and see if the RDSP is the right choice for you.</p>
+    </div>
+  </div>
+
+  <div class="card-container reverse one">
+    <div class="card two">
+      <h2 class="section-title"><i class="fas fa-bullseye icon"></i> WHAT IT WON’T DO FOR YOU</h2>
+        <p>
+            
+<strong>&#8226; It won’t replace other support programs.</strong></br>  Most people will still need help from federal and provincial services — the RDSP is just one part of that support.<br> 
+<br><strong>&#8226; It won’t guarantee a secure future on its own.</strong></br>  You’ll still need to plan for other things like housing, wills and estate planning, trusts, and supported decision-making.<br> 
+<br><strong>&#8226; It’s not a full solution — it’s a tool.</strong><br>  The RDSP helps, but it works best when combined with other long-term planning efforts.<br>
+            </p>
+    </div>
+  </div>
+
+  <div class="card-container second">
+    <div class="card one">
+      <h2 class="section-title"><i class="fas fa-book-open icon"></i> What About Government Benefits?</h2>
+      <p><strong>Many people </strong>ask if having an RDSP will affect their disability benefits — the good news is: <strong>it won’t.</strong></br>
+        Most provinces have two main rules for disability support programs: </p>
+       <p> <strong>&#8226; Asset Test – </strong>This looks at how much you own. Some things (like your house, car, or an RDSP) don’t count.</br></br>
+       <strong>&#8226; Income Test –</strong>  This looks at how much money you earn (from work, business, rent, or selling something). 
+        <p>💡 The RDSP doesn’t count against your benefits in any province or territory. That means you can save and grow money in your RDSP without losing your disability support.</p>
+  </div>
+</div>
+<div class="card-container reverse two">
+    <div class="card two">
+      <h2 class="section-title"><i class="fas fa-bullseye icon"></i> What Is the Disability Tax Credit (DTC)?</h2>
+        <p>
+           <strong>The Disability Tax Credit (DTC)</strong>  is a tax credit that helps reduce the amount of income tax you or your caregiver may need to pay, in recognition of the extra costs of living with a disability. It’s non-refundable, meaning it won’t give you cash directly, but it can lower your taxes. More importantly, it’s the key to opening an RDSP — without it, you can’t start one. If you’ve qualified in past years without knowing, you may even be able to claim back thousands in tax benefits. Applying takes some time, so it’s a good idea to get started early.  
+</p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-section logo-contact">
+      <img src="rdsp.co.png" alt="Logo" class="footer-logo" />
+      <p>Contact us: <br><a href="mailto:info@reei.ma">info@reei.ma</a></p>
+    </div>
+
+    <div class="footer-section help">
+      <img src="logo.png" alt="Mascot" class="mascot" />
+      <p class="help-text"><strong>Need Help?<br> I’m here</strong></p>
+    </div>
+
+    <div class="footer-section links">
+      <h3>Discover</h3>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Getting Started</a></li>
+        <li><a href="#">Opening</a></li>
+        <li><a href="#">Expert</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

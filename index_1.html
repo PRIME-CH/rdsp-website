@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RDSP Portal</title>
+  <style>
+
+
+    body {
+    
+  margin: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+
+}
+
+
+
+header {
+  background-color: #1746A2;
+  display: grid;
+  grid-template-columns:100px 1fr;
+  column-gap:100px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+
+  
+}
+
+nav {
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
+
+  gap:60px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  
+}
+.logo{
+  padding-left:0px;
+}
+
+
+.logo img{
+width: 170px;
+height: auto;
+}
+
+
+nav a:hover {
+  color: rgb(244, 188, 44);
+}
+  
+
+iframe {
+  width: 100%;
+  height: calc(100vh - 120px); /* adjust based on header height */
+  margin-top: 120px;
+  border: none;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+ 
+         /* Keep footer above everything */
+}
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* keeps it behind all content */
+ /* optional: make it a bit transparent */
+}
+
+
+</style>
+</head>
+<body>
+  <!--<video autoplay muted loop id="bg-video">
+    <source src="172475-847499816_small.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>-->
+  <header>
+
+     <div class="logo">
+      <img src="rdsp.co.png"></div>
+      <nav>
+
+      <a href="about_1.html" target="content-frame">About</a>
+      <a href="gettin_1.html" target="content-frame">Getting started</a>
+      <a href="opening_1.html" target="content-frame">Opening an RDSP</a>
+      <a href="chatbot_1.html" target="content-frame">Expert</a>
+    </nav>
+  </header>
+
+  <iframe name="content-frame" src="about_1.html" frameborder="0"></iframe>
+  
+ 
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RDSP Info</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+body,html{
+  overflow-x:hidden;
+}
+    p {
+      font-size: 27px;
+      line-height:35px;
+    }
+
+    .card-container {
+      background-color: transparent;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 40px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+
+    }
+    .card-container::before{
+      content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  z-index: 0; /* Ensure it stays behind the content */
+    }
+
+    .card-container.reverse {
+      justify-content: flex-end;
+      margin-right: 250px;
+    }
+   
+    .card-container:hover::before {
+  opacity: 0.9; /* Make the background visible on hover */
+}
+.card-container.reverse::before{
+  background-image: url("image2.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left center;
+
+}
+    .card-container.second::before{
+      background-image: url("image3.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position:right center;
+    
+    }
+
+  
+   .card-container.first::before{
+    background-image: url("image1.png");
+    background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right center;
+   }
+   
+ 
+    .card {
+      background-color: white;
+      padding: 25px;
+      width:60%;
+      transition: transform 0.7s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .card-container:hover .card {
+  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 5px 10px 20px rgba(70, 68, 68, 0.2); /* Add shadow */
+}
+    .card-container:hover .first,
+    .card-container:hover .card.one {
+      transform: translatey(-34px);
+    }
+
+    
+    .card-container:hover .card.two{
+      transform:translatey(-34px);
+    }
+  .card-container
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      display: flex;
+      gap: 12px;
+      color: rgb(244, 188, 44);
+    }
+
+    .stories {
+      background: #eef6ff;
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 90%;
+      margin: 60px auto 100px auto;
+      font-size: 30px;
+      box-shadow: 10px 6px 30px rgb(11, 26, 123);
+    }
+
+    .story {
+      background-color: #abdeed;
+      border-radius: 20px;
+      padding: 25px;
+      transition: transform 0.3s ease;
+      box-shadow: 10px 6px 30px grey;
+      margin:30px;
+    }
+
+    .story:hover {
+      transform: scale(1.05);
+    }
+
+    .story-author {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .story-quote {
+      font-style: italic;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .icon {
+      font-size: 1.4rem;
+      color: blue;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+.stories .section-title{
+  font-size: 2.5rem;
+      display: flex;
+      padding-bottom:30px;
+      justify-content:center;
+      color: rgb(244, 188, 44);
+}
+    .footer {
+      background-color: #133bb1;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px 50px;
+      border-top-right-radius: 20px;
+    }
+
+    .footer-section {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .footer-logo {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    .logo-contact p {
+      font-size: 26px;
+      line-height: 1.5;
+      font-style: italic;
+      margin-top: 60px;
+    }
+
+    .logo-contact a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .mascot {
+      width: 80px;
+    }
+
+    .help {
+      display: flex;
+      gap: 10px;
+    }
+
+    .help-text {
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .links h3 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      margin-left: 40px;
+    }
+
+    .links ul {
+      padding-left: 60px;
+    }
+
+    .links li {
+      margin: 5px 0;
+      font-size: 25px;
+    }
+
+    .links a {
+      color: #ffc800;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="abstract-glowing-neon-lines-wallpaperwaifu-com (1)" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="card-container first">
+    <div class="card one">
+      <h2 class="section-title"><i class="fas fa-lightbulb icon"></i> What is the RDSP?</h2>
+      <p><strong>The Registered Disability Savings Plan (RDSP)</strong> is a long-term savings program created by the Canadian government to help people with disabilities and their families save for the future. It allows contributions to grow tax-free and offers generous government support through grants and bonds. Whether you're planning ahead or supporting a loved one, the RDSP is a powerful tool to ensure financial security and peace of mind.</p>
+    </div>
+  </div>
+
+  <div class="card-container reverse">
+    <div class="card two">
+      <h2 class="section-title"><i class="fas fa-bullseye icon"></i> Why Open an RDSP?</h2>
+        <p><strong>Opening an RDSP </strong>is one of the smartest ways to build long-term financial stability for individuals with disabilities. Not only do your savings grow tax-free, but the government also contributes through matching grants and bonds — meaning more money for your future. Whether you're saving for education, living expenses, or long-term care, the RDSP helps create peace of mind and financial independence over time.</p>
+        <p><strong>Opening an RDSP</strong> is one of the smartest ways to build long-term financial stability. Not only do your savings grow tax-free, but the government also contributes through matching grants and bonds — helping build financial independence.</p>
+    </div>
+  </div>
+
+  <div class="card-container second">
+    <div class="card one">
+      <h2 class="section-title"><i class="fas fa-book-open icon"></i> History About the RDSP</h2>
+      <p><strong>The federal government implemented the RDSP</strong>on December 1, 2008. This was the result of many years of advocacy by Planned Lifetime Advocacy Network (PLAN), families, and supporters. PLAN worked with the provinces to accommodate the RDSP by raising asset limits and eliminating claw backs.
+
+        The Honorable Jim Flaherty, Minister of Finance, championed the RDSP concept within government. Employees in Finance Canada, Human Resources and Skills Development Canada, and Justice Canada, worked long hours at breakneck speed to make the idea a reality.</p>
+    </div>
+  </div>
+
+  <div class="stories">
+    <h2 class="section-title"><i class="fas fa-comments icon"></i> Stories</h2>
+    <div class="story">
+      <p class="story-author">Maggie is 12 years old – her parents, Bruce and Flora, would like to see her in a home of her own one day</p>
+      <p class="story-quote">Maggie is a gifted young girl who enjoys dance classes and singing in choirs. She attends grade 6 in her hometown of Lethbridge and has an inexorable desire to learn about everything around her. Maggie, having just returned from an overnight class field trip to the Royal Tyrell Dinosaur Museum, has her parents very excited. Sleeping in a museum overnight with your elementary class, without your parents along, is a big step for any 6th grader. The fact that Maggie has a severe disability and was able to participate represents a big step for the young girl who is staring to become more independent.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-section logo-contact">
+      <img src="rdsp.co.png" alt="Logo" class="footer-logo" />
+      <p>Contact us: <br><a href="mailto:info@reei.ma">info@reei.ma</a></p>
+    </div>
+
+    <div class="footer-section help">
+      <img src="logo.png" alt="Mascot" class="mascot" />
+      <p class="help-text"><strong>Need Help?<br> I’m here</strong></p>
+    </div>
+
+    <div class="footer-section links">
+      <h3>Discover</h3>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Getting Started</a></li>
+        <li><a href="#">Opening</a></li>
+        <li><a href="#">Expert</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

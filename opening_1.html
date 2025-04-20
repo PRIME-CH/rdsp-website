@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RDSP Info</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+body,html{
+  overflow-x:hidden;
+}
+    p {
+      font-size: 27px;
+      line-height:35px;
+    }
+
+    .card-container {
+      background-color: transparent;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 40px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+
+    }
+   
+
+    .card-container.reverse {
+      justify-content: flex-end;
+      margin-right: 250px;
+    }
+
+
+
+ 
+ 
+    .card {
+      background-color: white;
+      padding: 25px;
+      width:60%;
+      transition: transform 0.7s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .card-container:hover .card {
+  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 5px 10px 20px rgba(70, 68, 68, 0.2); /* Add shadow */
+}
+    .card-container:hover .first,
+    .card-container:hover .card.one {
+      transform: translatey(-34px);
+    }
+
+    
+    .card-container:hover .card.two{
+      transform:translatey(-34px);
+    }
+  .card-container
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      display: flex;
+      gap: 12px;
+      color: rgb(244, 188, 44);
+    }
+
+    .stories {
+      background: #eef6ff;
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 90%;
+      margin: 60px auto 100px auto;
+      font-size: 30px;
+      box-shadow: 10px 6px 30px rgb(11, 26, 123);
+    }
+
+    .story {
+      background-color: #abdeed;
+      border-radius: 20px;
+      padding: 25px;
+      transition: transform 0.3s ease;
+      box-shadow: 10px 6px 30px grey;
+      margin:30px;
+    }
+
+    .story:hover {
+      transform: scale(1.05);
+    }
+
+    .story-author {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .story-quote {
+      font-style: italic;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .icon {
+      font-size: 1.4rem;
+      color: blue;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+.stories .section-title{
+  font-size: 2.5rem;
+      display: flex;
+      padding-bottom:30px;
+      justify-content:center;
+      color: rgb(244, 188, 44);
+}
+    .footer {
+      background-color: #133bb1;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px 50px;
+      border-top-right-radius: 20px;
+    }
+
+    .footer-section {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .footer-logo {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    .logo-contact p {
+      font-size: 26px;
+      line-height: 1.5;
+      font-style: italic;
+      margin-top: 60px;
+    }
+
+    .logo-contact a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .mascot {
+      width: 80px;
+    }
+
+    .help {
+      display: flex;
+      gap: 10px;
+    }
+
+    .help-text {
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .links h3 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      margin-left: 40px;
+    }
+
+    .links ul {
+      padding-left: 60px;
+    }
+
+    .links li {
+      margin: 5px 0;
+      font-size: 25px;
+    }
+
+    .links a {
+      color: #ffc800;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+      color: white;
+    }
+
+    .added{
+      font-size: 30px;
+      margin-left: 20px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="abstract-glowing-neon-lines-wallpaperwaifu-com (1)" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+<!--left 1st-->
+  <div class="card-container first">
+    <div class="card one">
+      <h2 class="section-title"><i class="fas fa-lightbulb icon"></i> Opening The RDSP</h2>
+      <p>You’ve decided that you’d like to open an RDSP and you want to get started. This can be done by following each step in this section<br>First, just a reminder of what you need to be eligible to open an RDSP:</p>
+<div class="added">
+<ul>
+  <li>You are a resident of Canada</li>
+  <li>You have your valid, Social Insurance Number (SIN)</li>
+  <li>You are 59 years old or younger</li>
+  <li>You are eligible for the Disability Tax Credit</li>
+</ul></p>
+</div>
+    </div>
+  </div>
+
+
+<!--right 2nd-->
+  <div class="card-container reverse">
+    <div class="card two">
+      <h2 class="section-title"><i class="fas fa-bullseye icon"></i> How To Apply To DTC ?</h2>
+        <p>The DTC application process involves a few important steps. Here's a simple breakdown to help guide you:</p>
+  <div class="added">
+  <ol>
+    <li><strong>Step 1:</strong> Download the DTC Form (T2201) and fill out Part A.</li>
+    <li><strong>Step 2:</strong> Ask a qualified health professional (like your doctor or nurse practitioner) to complete Part B.</li>
+    <li><strong>Step 3:</strong> Get the signed form back, review it, and send it to the CRA by mail or online.</li>
+    <li><strong>Step 4:</strong> Wait for a response (usually takes 6–8 weeks). If denied, you can try again or file an objection.</li>
+  </ol>
+</div>
+    </div>
+  </div>
+
+
+<!--left 3rd-->
+  <div class="card-container second">
+    <div class="card one">
+      <h2 class="section-title"><i class="fas fa-book-open icon"></i> Apply For Social Insurance Number</h2>
+      <p><strong>A Social Insurance Number (SIN) </strong>A Social Insurance Number (SIN) is a unique 9-digit number used to identify individuals for work and access to government benefits in Canada. It’s required to open an RDSP.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Anyone over 12 can apply, and parents or legal guardians can apply for children or adults who need help. To get a SIN, gather an original ID (like a birth certificate), complete the application form from Service Canada, and submit it in person or by mail. SINs are now issued as confirmation letters. Once received, keep your SIN safe. If applying for someone else, include your ID, theirs, and legal documents proving your authority.
+
+</p>
+    </div>
+  </div>
+
+
+<!--right 4th-->
+  <div class="card-container reverse">
+    <div class="card two">
+      <h2 class="section-title"><i class="fas fa-book-open icon"></i> Filling Your Income Tax Returns</h2>
+      <p>In order for the government to know how much RDSP Grant and Bond you will receive, you need to file your income taxes every year. If you have never filed income taxes or have missed a few years, you will need to file taxes for the past two years.<br><br>&nbsp;&nbsp;<strong>There are two ways to file income taxes:</strong> you can either <strong style="font-weight: 500">file taxes on your own</strong> by getting the General Income Tax and Benefit Return for the year you're filing, filling out the forms, and mailing them in, or you can <strong style="font-weight: 500">get a professional to assist you</strong> if you find the process complicated.</p>
+    </div>
+  </div>
+
+
+<!--left 5th-->
+  <div class="card-container second">
+    <div class="card one">
+      <h2 class="section-title"><i class="fas fa-book-open icon"></i> Choosing Your Financial Situation</h2>
+      <p>Before opening an RDSP, check if your current bank offers it. If not, you'll need to choose another one. Ask about location, fees, how deposits work, investment options, and withdrawal rules. Some banks may charge to move your RDSP or limit how you manage or access the funds.<br><br>&nbsp;Not sure where to start? Our <a href="LINK_HERE" style="text-decoration: none;"><strong>Expert</strong></a> can help you</p>
+    </div>
+  </div>
+
+
+
+<!--right 6th-->
+  <div class="card-container reverse">
+    <div class="card two">
+      <h2 class="section-title"><i class="fas fa-bullseye icon"></i> Choosing Your Holder</h2>
+        <p><strong>Who is the Holder?</strong><br>The Holder manages the RDSP. If you're an adult and can handle your finances, you can be the Holder—even with help.</p>
+        <p><strong>For children:</strong><br>Parents or guardians are the Holders. They can continue or share the role when the child becomes an adult.</p>
+        <p><strong>If you can’t manage it:</strong><br>A legal representative (like a parent, spouse, or Power of Attorney) can be the Holder.</p>
+    </div>
+  </div>
+
+
+<!--left 7th-->
+  <div class="card-container second">
+    <div class="card one">
+      <h2 class="section-title"><i class="fas fa-book-open icon"></i> Your RDSP Starter Checklist</h2>
+      <p>Use this quick checklist to make sure you're good to go :</p>
+      <div class="added">
+<ul>
+  <li>Do you live in Canada?</li>
+  <li>Do you have your Social Insurance Number and valid photo ID?</li>
+  <li>YHave you been approved for the Disability Tax Credit (DTC)?</li>
+  <li>Have you picked your financial institution?</li>
+  <li>Do you know who will be the RDSP Holder?</li>
+</ul></p>
+</div>
+  <p>&nbsp;&nbsp;You <strong>don’t need</strong> your DTC certificate or tax returns—your financial institution and the government handle that. Just be ready to fill out the RDSP form and, if you want the grant and bond, those forms too. <strong>Want to skip</strong> the grant or bond? Just leave those sections blank.</p>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-section logo-contact">
+      <img src="rdsp.co.png" alt="Logo" class="footer-logo" />
+      <p>Contact us: <br><a href="mailto:info@reei.ma">info@reei.ma</a></p>
+    </div>
+
+    <div class="footer-section help">
+      <img src="logo.png" alt="Mascot" class="mascot" />
+      <p class="help-text"><strong>Need Help?<br> I’m here</strong></p>
+    </div>
+
+    <div class="footer-section links">
+      <h3>Discover</h3>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Getting Started</a></li>
+        <li><a href="#">Opening</a></li>
+        <li><a href="#">Expert</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
